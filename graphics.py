@@ -130,7 +130,7 @@ class Graphics:
         if index < s.EXPLOSION_FRAMES:
             size = s.EXPLOSION_TILE
             image = self.explosion_sheet.subsurface(index * size, 0,
-                                                   size, size)
+                                                    size, size)
             draw_wrapped(screen, image, pos)
 
     def draw_overlay(self, screen, lives, score, active):

@@ -50,8 +50,9 @@ class Game:
         elif event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
             self.running = False
         elif event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
-            if not self.active and self.graphics.splash.collidepoint(event.pos):
-                self.start()
+            if not self.active:
+                if self.graphics.splash.collidepoint(event.pos):
+                    self.start()
 
     def spawn_rock(self):
         """Выбрать случайную точку появления на расстоянии от корабля."""
